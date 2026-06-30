@@ -1,433 +1,286 @@
-<svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Carl Kristian Ortiz - Systems Engineering Architecture</title>
-  <desc id="desc">An ultra-polished, sophisticated engineering profile featuring a deeply detailed system architecture schematic linking software, infrastructure, and hardware.</desc>
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Carl Kristian Ortiz - Abstract System Architecture</title>
+  <desc id="desc">An ultra-premium, minimalist editorial profile featuring perfect typography and a mathematically precise abstract system constellation.</desc>
 
-  <!-- ======================================================================= -->
-  <!-- 1. DEFINITIONS: HIGH-END GRADIENTS, FILTERS, AND PATTERNS               -->
-  <!-- ======================================================================= -->
+  <!-- ========================================================================================= -->
+  <!-- 01. DEFINITIONS: HIGH-END FILTERS, MASKS, AND VOLUMETRIC LIGHTING                         -->
+  <!-- ========================================================================================= -->
   <defs>
-    <!-- Background Canvas Gradients -->
-    <radialGradient id="canvas-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="0%">
-      <stop offset="0%" stop-color="#18181b" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#09090b" stop-opacity="1"/>
+    <!-- Cinematic Volumetric Light Bleeds -->
+    <radialGradient id="glow-primary" cx="75%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="glow-accent" cx="90%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
     </radialGradient>
 
-    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#a1a1aa"/>
+    <radialGradient id="glow-node" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Exquisite Text Gradient for the Hero Headline -->
+    <linearGradient id="text-sheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#FAFAFA"/>
+      <stop offset="100%" stop-color="#71717A"/>
     </linearGradient>
 
-    <!-- Structural Materials (Glass/Metal equivalents) -->
-    <linearGradient id="panel-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#121214" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#09090b" stop-opacity="0.9"/>
-    </linearGradient>
+    <!-- Smooth Edge Dissolve Mask for the Constellation Network -->
+    <radialGradient id="edge-dissolve" cx="50%" cy="50%" r="50%">
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    
+    <mask id="network-mask">
+      <rect x="0" y="0" width="1200" height="420" fill="url(#edge-dissolve)" transform="translate(450, 0) scale(1.5, 1) translate(-450, 0)"/>
+    </mask>
 
-    <linearGradient id="panel-border" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3f3f46" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#27272a" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#3f3f46" stop-opacity="0.1"/>
-    </linearGradient>
-
-    <linearGradient id="node-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#18181b"/>
-      <stop offset="100%" stop-color="#121214"/>
-    </linearGradient>
-
-    <linearGradient id="chip-body" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#27272a"/>
-      <stop offset="100%" stop-color="#09090b"/>
-    </linearGradient>
-
-    <!-- Refined Grid Patterns -->
-    <pattern id="micro-dot" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="1" fill="#27272a" opacity="0.6"/>
-    </pattern>
-
-    <pattern id="blueprint-grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#27272a" stroke-width="0.5" opacity="0.3"/>
-    </pattern>
-
-    <!-- Exacting Drop Shadows for Depth (No sloppy glows) -->
-    <filter id="soft-shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
-    </filter>
-
-    <filter id="node-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    <!-- Hyper-Fine Film Grain Noise (Premium Texture) -->
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.04 0" />
     </filter>
   </defs>
 
-  <!-- ======================================================================= -->
-  <!-- 2. GLOBAL CSS STYLING & DETERMINISTIC ANIMATIONS                        -->
-  <!-- ======================================================================= -->
-  <style><![CDATA[
-    :root {
-      --bg-base: #09090b;
-      --text-main: #fafafa;
-      --text-muted: #a1a1aa;
-      --text-dark: #52525b;
-      --border-light: #3f3f46;
-      --border-dim: #27272a;
-
-      --accent-cyan: #06b6d4;
-      --accent-rose: #f43f5e;
-      --accent-amber: #f59e0b;
-      --accent-emerald: #10b981;
-    }
-
-    /* Strict Typography Definitions */
+  <!-- ========================================================================================= -->
+  <!-- 02. CSS ENGINE: EDITORIAL TYPOGRAPHY & SUBLIMINAL ANIMATIONS                              -->
+  <!-- ========================================================================================= -->
+  <style>
+    /* Strict Apple/Swiss Typography Defaults */
     .font-sans { font-family: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
     .font-mono { font-family: "JetBrains Mono", "SF Mono", "Fira Code", Consolas, monospace; }
 
-    /* Typographic Hierarchy Classes */
-    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 2px; fill: var(--text-dark); text-transform: uppercase; }
-    .name-title { font-size: 20px; font-weight: 500; letter-spacing: -0.2px; fill: var(--text-muted); }
-    .headline { font-size: 56px; font-weight: 800; letter-spacing: -1.5px; fill: url(#text-gradient); }
-    .domains { font-size: 13px; font-weight: 500; letter-spacing: 1px; fill: var(--text-muted); }
-    .bio-text { font-size: 16px; font-weight: 400; line-height: 1.6; fill: var(--text-muted); letter-spacing: 0.1px; }
+    /* Typographic Hierarchy - Flawless Proportions */
+    .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.3em; fill: #71717A; text-transform: uppercase; }
+    .headline { font-size: 64px; font-weight: 700; letter-spacing: -0.03em; fill: url(#text-sheen); }
+    .subhead { font-size: 24px; font-weight: 400; letter-spacing: -0.01em; fill: #A1A1AA; }
+    .body-text { font-size: 16px; font-weight: 400; line-height: 1.6; fill: #A1A1AA; letter-spacing: 0.01em; }
+    
+    /* Data Grid Typography */
+    .grid-label { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; fill: #52525B; text-transform: uppercase; }
+    .grid-value { font-size: 14px; font-weight: 500; letter-spacing: 0.02em; fill: #E4E4E7; }
 
-    /* Diagram & Tag Labels */
-    .tag-text { font-size: 12px; font-weight: 600; letter-spacing: 0.5px; fill: var(--text-main); }
-    .node-title { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; fill: var(--text-dark); text-transform: uppercase; }
-    .coord-text { font-size: 8px; font-weight: 500; letter-spacing: 0.5px; fill: #3f3f46; }
+    /* Constellation Network Styles */
+    .orbit-ring { fill: none; stroke: #FFFFFF; stroke-width: 1; stroke-opacity: 0.03; }
+    .orbit-dashed { fill: none; stroke: #FFFFFF; stroke-width: 1; stroke-opacity: 0.05; stroke-dasharray: 4 12; }
+    .mesh-line { fill: none; stroke: #FFFFFF; stroke-width: 0.5; stroke-opacity: 0.12; }
+    .mesh-line-accent { fill: none; stroke: #00E5FF; stroke-width: 0.75; stroke-opacity: 0.15; }
+    .node-core { fill: #FFFFFF; }
+    .node-glow { fill: url(#glow-node); opacity: 0.8; }
 
-    /* Precision Animations */
-    @keyframes dash-flow {
-      0% { stroke-dashoffset: 200; }
-      100% { stroke-dashoffset: 0; }
-    }
-    @keyframes dash-flow-reverse {
-      0% { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: 200; }
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
-    @keyframes spin-slow {
+    /* Subliminal Physics/Animations */
+    @keyframes slow-spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    @keyframes slow-spin-reverse {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes pulse-subtle {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+    @keyframes data-flow {
+      0% { stroke-dashoffset: 200; opacity: 0; }
+      20% { opacity: 0.8; }
+      80% { opacity: 0.8; }
+      100% { stroke-dashoffset: 0; opacity: 0; }
+    }
 
-    /* Trace & Bus Styles */
-    .bus-line { fill: none; stroke: var(--border-light); stroke-width: 1; stroke-linejoin: round; }
-    .bus-flow-cyan { fill: none; stroke: var(--accent-cyan); stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 4 46; animation: dash-flow 3s linear infinite; }
-    .bus-flow-amber { fill: none; stroke: var(--accent-amber); stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 6 54; animation: dash-flow-reverse 4s linear infinite; }
+    .spin-1 { animation: slow-spin 120s linear infinite; transform-origin: 900px 210px; }
+    .spin-2 { animation: slow-spin-reverse 180s linear infinite; transform-origin: 900px 210px; }
+    .spin-3 { animation: slow-spin 240s linear infinite; transform-origin: 900px 210px; }
+    
+    .pulse { animation: pulse-subtle 4s ease-in-out infinite; }
+    .flow-line { 
+      fill: none; stroke: #FFFFFF; stroke-width: 1.5; stroke-opacity: 0.8; 
+      stroke-dasharray: 4 196; animation: data-flow 4s cubic-bezier(0.4, 0, 0.2, 1) infinite; 
+    }
+  </style>
 
-    .pcb-trace { fill: none; stroke: #52525b; stroke-width: 1; stroke-linejoin: round; }
-    .pcb-pad { fill: #a1a1aa; }
-    .status-led { animation: blink 2.5s ease-in-out infinite; }
-  ]]></style>
+  <!-- ========================================================================================= -->
+  <!-- 03. CANVAS FOUNDATION: THE VOID & LIGHTING                                                -->
+  <!-- ========================================================================================= -->
+  <!-- Pure Vantablack Base -->
+  <rect width="1200" height="420" fill="#000000"/>
+  
+  <!-- Cinematic Ambient Light Bleeds -->
+  <rect width="1200" height="420" fill="url(#glow-primary)"/>
+  <rect width="1200" height="420" fill="url(#glow-accent)"/>
 
-  <!-- ======================================================================= -->
-  <!-- 3. BASE CANVAS & STRUCTURAL GRID                                        -->
-  <!-- ======================================================================= -->
-  <rect width="1200" height="400" fill="url(#canvas-glow)"/>
+  <!-- ========================================================================================= -->
+  <!-- 04. RIGHT WING: THE MATHEMATICAL SYSTEM CONSTELLATION (PURE DATA VISUALIZATION)           -->
+  <!-- ========================================================================================= -->
+  <!-- This is a hand-calculated trigonometric map representing an interconnected system architecture.
+       Center of gravity: X = 900, Y = 210. Masked perfectly to fade into the void. -->
+  <g id="system-constellation" mask="url(#network-mask)">
+    
+    <!-- THE ORBITAL PLANES (Representing Layers of Architecture) -->
+    <g class="spin-3">
+      <circle cx="900" cy="210" r="60" class="orbit-ring"/>
+      <circle cx="900" cy="210" r="120" class="orbit-dashed"/>
+      <circle cx="900" cy="210" r="180" class="orbit-ring"/>
+      <circle cx="900" cy="210" r="260" class="orbit-dashed"/>
+      <circle cx="900" cy="210" r="340" class="orbit-ring"/>
+      <circle cx="900" cy="210" r="440" class="orbit-ring" stroke-opacity="0.02"/>
+    </g>
 
-  <!-- Subtle top and bottom cinematic letterbox borders -->
-  <rect width="1200" height="1" fill="#27272a" opacity="0.5"/>
-  <rect y="399" width="1200" height="1" fill="#27272a" opacity="0.5"/>
+    <!-- THE NEURAL/SYSTEM MESH (Interconnecting paths between calculated nodes) -->
+    <!-- Grouped for opposing rotational physics -->
+    <g class="spin-1">
+      <!-- Inner Core Mesh -->
+      <path class="mesh-line" d="M 900 150 L 942 168 L 952 210 L 942 252 L 900 270 L 858 252 L 848 210 L 858 168 Z"/>
+      <path class="mesh-line" d="M 900 150 L 952 210 L 900 270 L 848 210 Z"/>
+      
+      <!-- Mid-tier Architecture Mesh -->
+      <path class="mesh-line" d="M 900 90 L 984 126 L 1004 210 L 984 294 L 900 330 L 816 294 L 796 210 L 816 126 Z"/>
+      <!-- Connecting Inner to Mid -->
+      <path class="mesh-line" d="M 900 150 L 900 90 M 942 168 L 984 126 M 952 210 L 1004 210 M 942 252 L 984 294"/>
+      <path class="mesh-line" d="M 900 270 L 900 330 M 858 252 L 816 294 M 848 210 L 796 210 M 858 168 L 816 126"/>
+      
+      <!-- Outer Infrastructure Mesh -->
+      <path class="mesh-line" d="M 900 -50 L 1083 69 L 1160 210 L 1083 351 L 900 470 L 717 351 L 640 210 L 717 69 Z"/>
+      <!-- Connecting Mid to Outer (Creating triangles) -->
+      <path class="mesh-line" d="M 900 90 L 900 -50 M 984 126 L 1083 69 M 1004 210 L 1160 210 M 984 294 L 1083 351"/>
+      <path class="mesh-line" d="M 900 330 L 900 470 M 816 294 L 717 351 M 796 210 L 640 210 M 816 126 L 717 69"/>
+      
+      <!-- Cross-Network Data Strands (Accent color) -->
+      <path class="mesh-line-accent" d="M 900 90 L 952 210 L 900 470"/>
+      <path class="mesh-line-accent" d="M 796 210 L 900 150 L 1083 69"/>
+      <path class="mesh-line-accent" d="M 640 210 L 858 252 L 984 294"/>
 
-  <!-- Background decorative coordinates (Extreme polish details) -->
-  <text x="24" y="24" class="font-mono coord-text">SYS.ARCH // X:0 Y:0</text>
-  <text x="1176" y="24" class="font-mono coord-text" text-anchor="end">MNL_PH // X:1200 Y:0</text>
-  <text x="24" y="386" class="font-mono coord-text">VOL: 0.94</text>
-  <text x="1176" y="386" class="font-mono coord-text" text-anchor="end">REV_04</text>
+      <!-- PRECISION NODES (Data Endpoints) -->
+      <!-- Inner Core Nodes -->
+      <circle cx="900" cy="150" r="2" class="node-core"/>
+      <circle cx="942" cy="168" r="1.5" class="node-core"/>
+      <circle cx="952" cy="210" r="2" class="node-core"/>
+      <circle cx="942" cy="252" r="1.5" class="node-core"/>
+      <circle cx="900" cy="270" r="2" class="node-core"/>
+      <circle cx="858" cy="252" r="1.5" class="node-core"/>
+      <circle cx="848" cy="210" r="2" class="node-core"/>
+      <circle cx="858" cy="168" r="1.5" class="node-core"/>
+      
+      <!-- Mid-tier Nodes -->
+      <circle cx="900" cy="90" r="3" class="node-core pulse"/>
+      <circle cx="984" cy="126" r="2" class="node-core"/>
+      <circle cx="1004" cy="210" r="3" class="node-core pulse"/>
+      <circle cx="984" cy="294" r="2" class="node-core"/>
+      <circle cx="900" cy="330" r="3" class="node-core pulse"/>
+      <circle cx="816" cy="294" r="2" class="node-core"/>
+      <circle cx="796" cy="210" r="3" class="node-core pulse"/>
+      <circle cx="816" cy="126" r="2" class="node-core"/>
 
-  <!-- Crosshairs at absolute corners -->
-  <g stroke="#3f3f46" stroke-width="1" opacity="0.6">
-    <path d="M 40 30 V 50 M 30 40 H 50" />
-    <path d="M 1160 30 V 50 M 1150 40 H 1170" />
-    <path d="M 40 350 V 370 M 30 360 H 50" />
-    <path d="M 1160 350 V 370 M 1150 360 H 1170" />
+      <!-- Outer Nodes -->
+      <circle cx="900" cy="-50" r="4" class="node-core"/>
+      <circle cx="1083" cy="69" r="2.5" class="node-core"/>
+      <circle cx="1160" cy="210" r="4" class="node-core pulse" style="animation-delay: 1s;"/>
+      <circle cx="1083" cy="351" r="2.5" class="node-core"/>
+      <circle cx="900" cy="470" r="4" class="node-core"/>
+      <circle cx="717" cy="351" r="2.5" class="node-core"/>
+      <circle cx="640" cy="210" r="4" class="node-core pulse" style="animation-delay: 2s;"/>
+      <circle cx="717" cy="69" r="2.5" class="node-core"/>
+
+      <!-- Glowing Halos for Primary Hubs -->
+      <circle cx="900" cy="90" r="16" class="node-glow"/>
+      <circle cx="1004" cy="210" r="16" class="node-glow"/>
+      <circle cx="900" cy="330" r="16" class="node-glow"/>
+      <circle cx="796" cy="210" r="16" class="node-glow"/>
+    </g>
+
+    <!-- Asynchronous Counter-Rotating Mesh Layer -->
+    <!-- Adds immense depth and complexity without visual clutter -->
+    <g class="spin-2">
+      <!-- Off-axis star pattern -->
+      <path class="mesh-line" d="M 900 30 L 962 175 L 1080 210 L 962 245 L 900 390 L 838 245 L 720 210 L 838 175 Z"/>
+      <circle cx="900" cy="30" r="2" class="node-core"/>
+      <circle cx="1080" cy="210" r="2" class="node-core"/>
+      <circle cx="900" cy="390" r="2" class="node-core"/>
+      <circle cx="720" cy="210" r="2" class="node-core"/>
+      
+      <!-- Floating untethered data points -->
+      <circle cx="1020" cy="90" r="1" fill="#00E5FF" opacity="0.8"/>
+      <circle cx="1050" cy="300" r="1" fill="#00E5FF" opacity="0.6"/>
+      <circle cx="750" cy="120" r="1" fill="#00E5FF" opacity="0.9"/>
+      <circle cx="780" cy="340" r="1" fill="#00E5FF" opacity="0.5"/>
+    </g>
+
+    <!-- Animated Data Pulses Traveling Along the Network -->
+    <path class="flow-line" d="M 900 90 L 900 150 L 848 210 L 796 210"/>
+    <path class="flow-line" style="animation-delay: 1.5s;" d="M 1160 210 L 1004 210 L 952 210 L 900 270 L 900 330"/>
+    <path class="flow-line" style="animation-delay: 2.8s;" d="M 640 210 L 796 210 L 816 126 L 900 90 L 1083 69"/>
   </g>
 
-  <!-- ======================================================================= -->
-  <!-- 4. LEFT PANEL: TYPOGRAPHY, IDENTITY & BIO (Absolute Balance)            -->
-  <!-- ======================================================================= -->
-  <g id="identity-block" transform="translate(80, 80)">
+  <!-- ========================================================================================= -->
+  <!-- 05. LEFT WING: FLAWLESS EDITORIAL TYPOGRAPHY & LAYOUT (THE "ANTI-SLOP" STRUCTURE)         -->
+  <!-- ========================================================================================= -->
+  <g id="typography-block" transform="translate(80, 0)">
+    
+    <!-- Section 1: Hero Identity -->
+    <!-- The translation group starts at 96px on the Y axis, but we offset the elements 
+         internally to create perfect 8-point baseline rhythm. -->
+    <g transform="translate(0, 96)">
+      <!-- Name (Eyebrow): Shifted to y=-24 to create exactly an 80px visual gap to the headline below it -->
+      <text x="2" y="-24" class="font-mono eyebrow">Carl Kristian Ortiz</text>
+      
+      <!-- Massive, perfectly kerned Headline with gradient sheen -->
+      <!-- Set at y=56. Gap between -24 and 56 = 80px flawless optical balance -->
+      <text x="-4" y="56" class="font-sans headline">Builds systems.</text>
+      
+      <!-- Minimalist Domain List -->
+      <!-- Set at y=104. Gap between 56 and 104 = 48px flawless step-down proportion -->
+      <text x="0" y="104" class="font-sans subhead">Software <tspan fill="#3F3F46"> / </tspan> Embedded <tspan fill="#3F3F46"> / </tspan> Infra</text>
+    </g>
 
-    <!-- Sub-eyebrow metadata -->
-    <text x="0" y="0" class="font-mono eyebrow">Computer Engineering / System Architect</text>
-
-    <!-- Identity -->
-    <text x="0" y="28" class="font-sans name-title">Carl Kristian Ortiz</text>
-
-    <!-- Assertive, perfectly tracked headline -->
-    <text x="-3" y="96" class="font-sans headline">Builds systems.</text>
-
-    <!-- Structural domain separator -->
-    <g transform="translate(0, 130)">
-      <rect x="0" y="0" width="4" height="4" fill="var(--accent-cyan)"/>
-      <rect x="12" y="0" width="4" height="4" fill="var(--accent-amber)"/>
-      <rect x="24" y="0" width="4" height="4" fill="var(--accent-rose)"/>
-      <text x="40" y="7" class="font-mono domains">
-        SOFTWARE <tspan fill="#3f3f46">///</tspan> EMBEDDED <tspan fill="#3f3f46">///</tspan> DOCS <tspan fill="#3f3f46">///</tspan> INFRA
+    <!-- Section 2: Narrative / Bio -->
+    <g transform="translate(0, 240)">
+      <text x="0" y="0" class="font-sans body-text">
+        <tspan x="0" dy="0">Computer Engineering student based in Manila.</tspan>
+        <tspan x="0" dy="28">Engineering the gap between high-level application</tspan>
+        <tspan x="0" dy="28">architecture and precise hardware logic.</tspan>
       </text>
     </g>
 
-    <!-- Bio paragraph precisely wrapped -->
-    <text x="0" y="174" class="font-sans bio-text">
-      <tspan x="0" dy="0">Computer Engineering student based in Manila, bridging</tspan>
-      <tspan x="0" dy="26">the gap between high-level software architectures, precise</tspan>
-      <tspan x="0" dy="26">embedded hardware, and evidence-driven documentation.</tspan>
-    </text>
-
-    <!-- ========================================== -->
-    <!-- TECH STACK TAGS (Refined, Minimalist)      -->
-    <!-- ========================================== -->
-    <g transform="translate(0, 246)">
-      <!-- React Tag -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="100" height="32" rx="16" fill="#09090b" stroke="#27272a" stroke-width="1"/>
-        <circle cx="16" cy="16" r="4" fill="var(--accent-cyan)"/>
-        <!-- Perfect mini React atom -->
-        <g transform="translate(16, 16) scale(0.6)" class="status-led" style="transform-origin: center; animation: spin-slow 10s linear infinite;">
-          <ellipse rx="5" ry="2" fill="none" stroke="#09090b" stroke-width="1.5"/>
-          <ellipse rx="5" ry="2" fill="none" stroke="#09090b" stroke-width="1.5" transform="rotate(60)"/>
-          <ellipse rx="5" ry="2" fill="none" stroke="#09090b" stroke-width="1.5" transform="rotate(120)"/>
-        </g>
-        <text x="32" y="21" class="font-sans tag-text">React</text>
+    <!-- Section 3: The Data Grid (Replacing basic slop tags with a premium table) -->
+    <g transform="translate(0, 344)">
+      <!-- Flawless 1px Separator Line -->
+      <line x1="0" y1="0" x2="520" y2="0" stroke="#27272A" stroke-width="1"/>
+      
+      <!-- Grid Column 1: Core Systems -->
+      <g transform="translate(0, 24)">
+        <text x="0" y="0" class="font-sans grid-label">ARCHITECTURE</text>
+        <text x="0" y="24" class="font-mono grid-value">React / Node.js</text>
+      </g>
+      
+      <!-- Grid Column 2: Backend & Logic -->
+      <g transform="translate(180, 24)">
+        <text x="0" y="0" class="font-sans grid-label">BACKEND &amp; API</text>
+        <text x="0" y="24" class="font-mono grid-value">Laravel / C++</text>
       </g>
 
-      <!-- Laravel Tag -->
-      <g transform="translate(112, 0)">
-        <rect x="0" y="0" width="114" height="32" rx="16" fill="#09090b" stroke="#27272a" stroke-width="1"/>
-        <circle cx="16" cy="16" r="4" fill="var(--accent-rose)"/>
-        <!-- Tiny isometric box for Laravel -->
-        <g transform="translate(16, 16) scale(0.7)">
-          <path d="M 0 -4 L 4 -2 L 4 3 L 0 5 L -4 3 L -4 -2 Z" fill="#09090b"/>
-          <path d="M 0 -4 L 4 -2 M 0 1 L 4 -2 M 0 1 L -4 -2 M 0 1 V 5" fill="none" stroke="var(--accent-rose)" stroke-width="1"/>
-        </g>
-        <text x="32" y="21" class="font-sans tag-text">Laravel</text>
-      </g>
-
-      <!-- KiCad Tag -->
-      <g transform="translate(238, 0)">
-        <rect x="0" y="0" width="104" height="32" rx="16" fill="#09090b" stroke="#27272a" stroke-width="1"/>
-        <circle cx="16" cy="16" r="4" fill="var(--accent-amber)"/>
-        <!-- PCB Node Icon -->
-        <g transform="translate(16, 16) scale(0.8)">
-          <rect x="-3" y="-3" width="6" height="6" fill="#09090b"/>
-          <path d="M -3 0 H -5 M 3 0 H 5 M 0 -3 V -5 M 0 3 V 5" fill="none" stroke="var(--accent-amber)" stroke-width="1"/>
-        </g>
-        <text x="32" y="21" class="font-sans tag-text">KiCad</text>
+      <!-- Grid Column 3: Hardware & Infra -->
+      <g transform="translate(360, 24)">
+        <text x="0" y="0" class="font-sans grid-label">HARDWARE / EDA</text>
+        <text x="0" y="24" class="font-mono grid-value">KiCad / AWS</text>
       </g>
     </g>
   </g>
 
-  <!-- ======================================================================= -->
-  <!-- 5. RIGHT PANEL: THE ENTERPRISE SYSTEM ARCHITECTURE MAP                  -->
-  <!-- ======================================================================= -->
-  <g id="architecture-diagram" transform="translate(680, 40)">
+  <!-- ========================================================================================= -->
+  <!-- 06. FINAL POLISH: TEXTURE OVERLAY                                                         -->
+  <!-- ========================================================================================= -->
+  <!-- The ultimate hallmark of premium design: a microscopic film grain overlay 
+       that binds the vectors together and prevents digital banding. -->
+  <rect width="1200" height="420" fill="transparent" style="pointer-events: none;" filter="url(#noise)"/>
 
-    <!-- Diagram Main Glass Container -->
-    <rect x="0" y="0" width="480" height="320" rx="12" fill="url(#panel-bg)" stroke="url(#panel-border)" stroke-width="1" filter="url(#soft-shadow)"/>
+  <!-- Structural Frame borders (Ultra subtle) -->
+  <rect x="0.5" y="0.5" width="1199" height="419" fill="none" stroke="#27272A" stroke-width="1" stroke-opacity="0.3"/>
 
-    <!-- Internal Blueprint Grid -->
-    <rect x="1" y="1" width="478" height="318" rx="11" fill="url(#blueprint-grid)"/>
-    <rect x="1" y="1" width="478" height="318" rx="11" fill="url(#micro-dot)"/>
-
-    <!-- Diagram Coordinates & Metatags -->
-    <text x="16" y="24" class="font-mono coord-text">TOPOLOGY: CYBER-PHYSICAL</text>
-    <text x="464" y="24" class="font-mono coord-text" text-anchor="end">STATUS: ACTIVE</text>
-    <circle cx="370" cy="21" r="3" fill="var(--accent-emerald)" class="status-led"/>
-
-    <!-- ========================================== -->
-    <!-- 5A. ORTHOGONAL DATA BUSES (Drawn First to sit underneath nodes) -->
-    <!-- ========================================== -->
-
-    <!-- Bus 1: Frontend (Software) <-> Infrastructure (API) -->
-    <!-- Frontend center right: 196, 100. Infra center left: 300, 100 -->
-    <g id="bus-software-infra">
-      <!-- Trace Lines -->
-      <path class="bus-line" d="M 196 95 H 280 A 5 5 0 0 1 285 100 A 5 5 0 0 0 290 105 H 300"/>
-      <path class="bus-line" d="M 196 100 H 300"/>
-      <path class="bus-line" d="M 196 105 H 280 A 5 5 0 0 0 285 100 A 5 5 0 0 1 290 95 H 300"/>
-      <!-- Animated Data Flows -->
-      <path class="bus-flow-cyan" d="M 196 100 H 300"/>
-    </g>
-
-    <!-- Bus 2: Infrastructure (API) <-> Embedded (Hardware) -->
-    <!-- Infra bottom center: 380, 160. Embedded right top: 380, 200 -->
-    <g id="bus-infra-hardware">
-      <path class="bus-line" d="M 370 160 V 180 A 10 10 0 0 0 360 190 H 340 A 10 10 0 0 1 330 200 V 220"/>
-      <path class="bus-line" d="M 380 160 V 220"/>
-      <path class="bus-line" d="M 390 160 V 180 A 10 10 0 0 1 400 190 H 420 A 10 10 0 0 0 430 200 V 220"/>
-      <!-- Animated Data Flows -->
-      <path class="bus-flow-amber" d="M 380 160 V 220"/>
-    </g>
-
-    <!-- Bus 3: Frontend (Control) <-> Embedded (Hardware) -->
-    <!-- Frontend bottom center: 116, 160. Embedded left top: 116, 200. -->
-    <g id="bus-software-hardware">
-      <path class="bus-line" d="M 106 160 V 190 A 10 10 0 0 0 116 200 H 130 A 10 10 0 0 1 140 210 V 220"/>
-      <path class="bus-line" d="M 116 160 V 220"/>
-      <path class="bus-line" d="M 126 160 V 190 A 10 10 0 0 1 116 200 H 102 A 10 10 0 0 0 92 210 V 220"/>
-      <!-- Animated Data Flows -->
-      <path class="bus-flow-cyan" d="M 116 160 V 220" style="animation-delay: 1.5s; stroke-dasharray: 8 50;"/>
-    </g>
-
-    <!-- ========================================== -->
-    <!-- 5B. NODE 1: SOFTWARE / CLIENT SPACE        -->
-    <!-- ========================================== -->
-    <g id="node-software" transform="translate(36, 40)" filter="url(#node-shadow)">
-      <!-- Node Base -->
-      <rect x="0" y="0" width="160" height="120" rx="8" fill="url(#node-gradient)" stroke="#27272a" stroke-width="1.5"/>
-      <text x="12" y="16" class="font-sans node-title">CLIENT / VIRTUAL</text>
-      <line x1="0" y1="24" x2="160" y2="24" stroke="#27272a" stroke-width="1"/>
-
-      <!-- Micro UI Wireframe -->
-      <g transform="translate(12, 36)">
-        <!-- Window frame -->
-        <rect x="0" y="0" width="136" height="72" rx="4" fill="#09090b" stroke="#3f3f46" stroke-width="1"/>
-        <line x1="0" y1="12" x2="136" y2="12" stroke="#3f3f46" stroke-width="1"/>
-        <circle cx="6" cy="6" r="1.5" fill="#52525b"/>
-        <circle cx="12" cy="6" r="1.5" fill="#52525b"/>
-        <circle cx="18" cy="6" r="1.5" fill="#52525b"/>
-
-        <!-- Sidebar -->
-        <rect x="0" y="12" width="32" height="60" fill="#121214"/>
-        <line x1="32" y1="12" x2="32" y2="72" stroke="#3f3f46" stroke-width="1"/>
-        <!-- Sidebar items -->
-        <rect x="4" y="20" width="24" height="4" rx="2" fill="#27272a"/>
-        <rect x="4" y="30" width="16" height="4" rx="2" fill="#27272a"/>
-        <rect x="4" y="40" width="20" height="4" rx="2" fill="#27272a"/>
-
-        <!-- Main Content Area / Dashboard graph -->
-        <rect x="44" y="22" width="80" height="24" rx="2" fill="#18181b" stroke="#27272a" stroke-width="1"/>
-        <path d="M 46 42 L 56 32 L 66 36 L 80 26 L 90 30 L 105 24 L 120 38" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-        <!-- Data blocks -->
-        <rect x="44" y="54" width="36" height="12" rx="2" fill="#27272a"/>
-        <rect x="88" y="54" width="36" height="12" rx="2" fill="#27272a"/>
-      </g>
-    </g>
-
-    <!-- ========================================== -->
-    <!-- 5C. NODE 2: INFRASTRUCTURE / BACKEND API   -->
-    <!-- ========================================== -->
-    <g id="node-infra" transform="translate(300, 40)" filter="url(#node-shadow)">
-      <!-- Node Base -->
-      <rect x="0" y="0" width="160" height="120" rx="8" fill="url(#node-gradient)" stroke="#27272a" stroke-width="1.5"/>
-      <text x="12" y="16" class="font-sans node-title">API / INFRA</text>
-      <line x1="0" y1="24" x2="160" y2="24" stroke="#27272a" stroke-width="1"/>
-
-      <!-- Server Rack Blueprint -->
-      <g transform="translate(16, 36)">
-
-        <!-- Blade 1 -->
-        <g transform="translate(0, 0)">
-          <rect x="0" y="0" width="128" height="18" rx="2" fill="#09090b" stroke="#3f3f46" stroke-width="1"/>
-          <!-- Drive bays -->
-          <rect x="4" y="4" width="8" height="10" rx="1" fill="#27272a"/>
-          <rect x="16" y="4" width="8" height="10" rx="1" fill="#27272a"/>
-          <rect x="28" y="4" width="8" height="10" rx="1" fill="#27272a"/>
-          <rect x="40" y="4" width="8" height="10" rx="1" fill="#27272a"/>
-          <!-- Status -->
-          <circle cx="118" cy="9" r="2" fill="var(--accent-rose)" class="status-led"/>
-          <line x1="60" y1="9" x2="105" y2="9" stroke="#3f3f46" stroke-dasharray="2 2"/>
-        </g>
-
-        <!-- Blade 2 -->
-        <g transform="translate(0, 24)">
-          <rect x="0" y="0" width="128" height="18" rx="2" fill="#09090b" stroke="#3f3f46" stroke-width="1"/>
-          <rect x="4" y="4" width="8" height="10" rx="1" fill="#27272a"/>
-          <rect x="16" y="4" width="8" height="10" rx="1" fill="#27272a"/>
-          <rect x="28" y="4" width="8" height="10" rx="1" fill="#27272a"/>
-          <rect x="40" y="4" width="8" height="10" rx="1" fill="#27272a"/>
-          <circle cx="118" cy="9" r="2" fill="var(--accent-rose)" class="status-led" style="animation-delay: 0.5s;"/>
-          <line x1="60" y1="9" x2="105" y2="9" stroke="#3f3f46" stroke-dasharray="2 2"/>
-        </g>
-
-        <!-- Database Stack -->
-        <g transform="translate(48, 52)">
-          <path d="M 0 6 C 0 2, 32 2, 32 6 C 32 10, 0 10, 0 6 Z" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
-          <path d="M 0 6 V 12 C 0 16, 32 16, 32 12 V 6" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
-          <path d="M 0 12 V 18 C 0 22, 32 22, 32 18 V 12" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
-        </g>
-      </g>
-    </g>
-
-    <!-- ========================================== -->
-    <!-- 5D. NODE 3: EMBEDDED / HARDWARE (MAX EFFORT) -->
-    <!-- ========================================== -->
-    <!-- The crown jewel. A fully hand-coded QFP-32 logic board representation -->
-    <g id="node-embedded" transform="translate(90, 220)" filter="url(#node-shadow)">
-      <!-- Board Base -->
-      <rect x="0" y="0" width="300" height="84" rx="8" fill="url(#node-gradient)" stroke="#27272a" stroke-width="1.5"/>
-      <text x="12" y="16" class="font-sans node-title">HARDWARE / EMBEDDED LOGIC</text>
-      <line x1="0" y1="24" x2="300" y2="24" stroke="#27272a" stroke-width="1"/>
-
-      <!-- Inner PCB Area -->
-      <g transform="translate(10, 32)">
-        <!-- Reference Grid on PCB -->
-        <rect x="0" y="0" width="280" height="42" fill="#09090b" rx="4"/>
-
-        <!-- EXHAUSTIVE QFP-32 CHIP (Center at x=140, y=21) -->
-        <!-- Chip body is 24x24. x=128, y=9. -->
-
-        <!-- Hand-coded PCB Traces radiating from pins -->
-        <!-- Top Left quadrant routing -->
-        <path class="pcb-trace" d="M 124 12 H 105 L 100 7 H 90"/>
-        <path class="pcb-trace" d="M 124 15 H 108 L 103 10 H 90"/>
-        <path class="pcb-trace" d="M 124 18 H 111 L 106 13 H 90"/>
-        <!-- Bottom Left quadrant routing -->
-        <path class="pcb-trace" d="M 124 24 H 111 L 106 29 H 90"/>
-        <path class="pcb-trace" d="M 124 27 H 108 L 103 32 H 90"/>
-        <path class="pcb-trace" d="M 124 30 H 105 L 100 35 H 90"/>
-        <!-- Right quadrant routing -->
-        <path class="pcb-trace" d="M 156 15 H 172 L 177 10 H 190"/>
-        <path class="pcb-trace" d="M 156 21 H 200"/>
-        <path class="pcb-trace" d="M 156 27 H 172 L 177 32 H 190"/>
-
-        <!-- SMD Components attached to traces -->
-        <rect x="84" y="6" width="6" height="2" fill="#a1a1aa"/>
-        <rect x="84" y="9" width="6" height="2" fill="#a1a1aa"/>
-        <rect x="84" y="12" width="6" height="2" fill="#a1a1aa"/>
-        <rect x="84" y="28" width="6" height="2" fill="#a1a1aa"/>
-        <rect x="84" y="31" width="6" height="2" fill="#a1a1aa"/>
-        <rect x="84" y="34" width="6" height="2" fill="#a1a1aa"/>
-
-        <rect x="190" y="9" width="6" height="2" fill="#a1a1aa"/>
-        <rect x="200" y="20" width="8" height="2" fill="#f59e0b"/> <!-- Amber LED / Component -->
-        <rect x="190" y="31" width="6" height="2" fill="#a1a1aa"/>
-
-        <!-- The Microchip Body & Pins -->
-        <!-- 8 pins Left (Y: 12, 15, 18, 21, 24, 27, 30, 33) -->
-        <path d="M 124 11 v 2 h 4 v -2 z M 124 14 v 2 h 4 v -2 z M 124 17 v 2 h 4 v -2 z M 124 20 v 2 h 4 v -2 z M 124 23 v 2 h 4 v -2 z M 124 26 v 2 h 4 v -2 z M 124 29 v 2 h 4 v -2 z M 124 32 v 2 h 4 v -2 z" fill="#71717a"/>
-        <!-- 8 pins Right (Y: 12, 15, 18, 21, 24, 27, 30, 33) -->
-        <path d="M 152 11 v 2 h 4 v -2 z M 152 14 v 2 h 4 v -2 z M 152 17 v 2 h 4 v -2 z M 152 20 v 2 h 4 v -2 z M 152 23 v 2 h 4 v -2 z M 152 26 v 2 h 4 v -2 z M 152 29 v 2 h 4 v -2 z M 152 32 v 2 h 4 v -2 z" fill="#71717a"/>
-        <!-- 8 pins Top (X: 131, 134, 137, 140, 143, 146, 149, 152. Wait, chip body is 128 to 152. Center is 140. Let's precise X.) -->
-        <path d="M 129 5 h 2 v 4 h -2 z M 132 5 h 2 v 4 h -2 z M 135 5 h 2 v 4 h -2 z M 138 5 h 2 v 4 h -2 z M 141 5 h 2 v 4 h -2 z M 144 5 h 2 v 4 h -2 z M 147 5 h 2 v 4 h -2 z M 150 5 h 2 v 4 h -2 z" fill="#71717a"/>
-        <!-- 8 pins Bottom -->
-        <path d="M 129 33 h 2 v 4 h -2 z M 132 33 h 2 v 4 h -2 z M 135 33 h 2 v 4 h -2 z M 138 33 h 2 v 4 h -2 z M 141 33 h 2 v 4 h -2 z M 144 33 h 2 v 4 h -2 z M 147 33 h 2 v 4 h -2 z M 150 33 h 2 v 4 h -2 z" fill="#71717a"/>
-
-        <!-- Main IC Package -->
-        <rect x="127" y="8" width="26" height="26" rx="2" fill="url(#chip-body)" stroke="#3f3f46" stroke-width="1"/>
-        <circle cx="131" cy="12" r="1.5" fill="#52525b"/> <!-- Pin 1 Indicator -->
-        <text x="140" y="20" class="font-mono" font-size="4" fill="#a1a1aa" text-anchor="middle">CKO</text>
-        <text x="140" y="26" class="font-mono" font-size="4" fill="#52525b" text-anchor="middle">SOC-26</text>
-
-        <!-- Peripheral System: Clock Crystal -->
-        <rect x="60" y="16" width="10" height="10" rx="1" fill="#18181b" stroke="#71717a" stroke-width="1"/>
-        <text x="65" y="23" class="font-mono" font-size="3" fill="#a1a1aa" text-anchor="middle">16Mhz</text>
-
-        <!-- Peripheral System: ICSP Header Pins -->
-        <g transform="translate(230, 16)">
-          <rect x="0" y="0" width="16" height="10" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
-          <!-- 2x3 Pin Grid -->
-          <circle cx="4" cy="3" r="1" fill="#d4d4d8"/>
-          <circle cx="8" cy="3" r="1" fill="#d4d4d8"/>
-          <circle cx="12" cy="3" r="1" fill="#d4d4d8"/>
-          <circle cx="4" cy="7" r="1" fill="#d4d4d8"/>
-          <circle cx="8" cy="7" r="1" fill="#d4d4d8"/>
-          <circle cx="12" cy="7" r="1" fill="#d4d4d8"/>
-        </g>
-      </g>
-    </g>
-
-  </g>
 </svg>
