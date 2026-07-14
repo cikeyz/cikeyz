@@ -2,12 +2,6 @@
   <img src="./assets/profile-header.svg" alt="Carl Kristian Ortiz - systems engineering profile banner" width="100%" />
 </p>
 
-<p align="center">
-  <img alt="PUP" src="https://img.shields.io/badge/PUP-BS%20Computer%20Engineering-880000?logo=google-scholar&logoColor=white">
-  <img alt="GitHub" src="https://img.shields.io/badge/GitHub-cikeyz-181717?logo=github&logoColor=white">
-  <img alt="Stack" src="https://img.shields.io/badge/Stack-PHP%20·%20React%20·%20JS%20·%20SQL-0ea5e9">
-</p>
-
 ## About
 
 Computer Engineering student at the Polytechnic University of the Philippines (Manila). I ship practical systems: full-stack web, mobile packaging, embedded prototypes, and documentation that another engineer can actually run.
