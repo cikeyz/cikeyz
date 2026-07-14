@@ -2,34 +2,69 @@
   <img src="./assets/profile-header.svg" alt="Carl Kristian Ortiz - systems engineering profile banner" width="100%" />
 </p>
 
+<p align="center">
+  <img alt="PUP" src="https://img.shields.io/badge/PUP-BS%20Computer%20Engineering-880000?logo=google-scholar&logoColor=white">
+  <img alt="GitHub" src="https://img.shields.io/badge/GitHub-cikeyz-181717?logo=github&logoColor=white">
+  <img alt="Stack" src="https://img.shields.io/badge/Stack-PHP%20·%20React%20·%20JS%20·%20SQL-0ea5e9">
+</p>
+
 ## About
 
-Computer Engineering student at the Polytechnic University of the Philippines, Manila. I build across full-stack software, embedded systems, infrastructure documentation, and network/security coursework.
+Computer Engineering student at the Polytechnic University of the Philippines (Manila). I ship practical systems: full-stack web, mobile packaging, embedded prototypes, and documentation that another engineer can actually run.
 
-The through-line is practical systems work: make the thing run, make the behavior verifiable, and leave enough documentation that someone else can continue without guessing.
+Preference: verifiable behavior over slide-deck claims. If a repo cannot be opened, tested, or handed off cleanly, it is not finished.
 
-## Building Around
+## Featured work
 
-| Lane | Current shape |
-|---|---|
-| **Product engineering** | Laravel/PHP, React/TypeScript, SQL-backed workflows, API contracts, deployment notes, and mobile packaging. |
-| **Embedded systems** | Arduino Mega/Uno work, I2C devices, relay control, ultrasonic sensing, real-time firmware scheduling, and KiCad PCB handoff. |
-| **DocOps / knowledge systems** | Hugo/Markdown documentation, Diataxis structure, OpenAPI/spec writing, Mermaid/PlantUML diagrams, and source-linked evidence. |
-| **Infra and testing** | GitHub Actions, Docker, Helm/Kubernetes exposure, Terraform documentation, PHPUnit, JMeter, Gatling, and security-test runbooks. |
-| **Networking and security** | Cisco Packet Tracer, VLANs, OSPF, HSRP, LACP, STP, DHCP snooping, port security, WPA2-Enterprise, and Wireshark. |
+### Product / full-stack
 
-## Public Surface
+| Project | What it is |
+|---------|------------|
+| [**prepflow**](https://github.com/cikeyz/prepflow) | Thai Joint PH ordering, payment-proof verification, kitchen prep automation. Laravel API, React SPA, Capacitor Android. [Live](https://prepflow-vercel-static.vercel.app/) · [APK release](https://github.com/cikeyz/prepflow/releases) |
+| [**pup-cea-cpe-portal**](https://github.com/cikeyz/pup-cea-cpe-portal) | PHP/MySQL student + guest portal: enrollment, login, password reset, dashboard. [Live demo](https://pup-cea-cpe-portal.freedev.app/index.php) |
+| [**hybrid-web-apps**](https://github.com/cikeyz/hybrid-web-apps) | Three Cordova Android apps from vanilla web UIs (karaoke, portfolio, registration). [APKs](https://github.com/cikeyz/hybrid-web-apps/releases) |
 
-Most of my heavier school and work projects are private because they contain coursework evidence, client context, or internal documentation. The public repos here are the visible edge of a larger working archive, not the full project history.
+### Web systems coursework (CMPE 364)
 
-The public work that matters most right now is the PUP CEA-CpE portal: a PHP/MySQL student and guest portal with login, registration, role-aware dashboard, password reset, and PUP-style student number generation.
+| Project | What it is |
+|---------|------------|
+| [**quizly**](https://github.com/cikeyz/quizly) | Build and take quizzes in-browser (`localStorage`). [Demo](https://cikeyz.github.io/quizly/) |
+| [**aphelion-brews**](https://github.com/cikeyz/aphelion-brews) | Cinematic single-page drink shop (CSS-first nav). [Demo](https://cikeyz.github.io/aphelion-brews/) |
+| [**pup-hymn-karaoke**](https://github.com/cikeyz/pup-hymn-karaoke) | Word-level LRC karaoke for the PUP Hymn. [Demo](https://cikeyz.github.io/pup-hymn-karaoke/) |
+| [**pup-vicinity-map**](https://github.com/cikeyz/pup-vicinity-map) | Interactive Santa Mesa campus image map. [Demo](https://cikeyz.github.io/pup-vicinity-map/) |
+| [**ck-dev-verse**](https://github.com/cikeyz/ck-dev-verse) | Terminal-boot personal portfolio. [Demo](https://cikeyz.github.io/ck-dev-verse/) |
+| [**student-registration**](https://github.com/cikeyz/student-registration) | Multi-section registration form with live validation. [Demo](https://cikeyz.github.io/student-registration/) |
 
-## Current Focus
+### Data structures visualizations (CMPE 201)
 
-- hardening my OJT/dev workflow around DevOps, testing, documentation, and security
-- turning school systems into clean handoff packages instead of one-off submissions
-- improving the public side of my GitHub so it reflects the work without leaking private context
+Seven interactive case studies (vanilla JS/CSS/HTML; BST also uses a small Flask API):
 
-## Working Style
+| Project | Focus |
+|---------|--------|
+| [**xoxo-array**](https://github.com/cikeyz/xoxo-array) | Arrays / tic-tac-toe state |
+| [**park-stacks**](https://github.com/cikeyz/park-stacks) | Stacks / LIFO parking |
+| [**park-queue**](https://github.com/cikeyz/park-queue) | Queues / FIFO parking |
+| [**treetrav-bin**](https://github.com/cikeyz/treetrav-bin) | Binary tree traversals |
+| [**bst-explorer**](https://github.com/cikeyz/bst-explorer) | BST / AVL exploration |
+| [**hanoi-viz**](https://github.com/cikeyz/hanoi-viz) | Tower of Hanoi |
+| [**sort-viz**](https://github.com/cikeyz/sort-viz) | Sorting algorithms |
 
-I prefer evidence over vibes: compile logs, test notes, screenshots, diagrams, source-linked docs, and clear assumptions. If a repo does not say how to run it, verify it, or continue it, I treat that as unfinished engineering work.
+## Building around
+
+| Lane | Tools and themes |
+|------|------------------|
+| Product engineering | Laravel/PHP, React/TypeScript, MySQL, JSON APIs, Vercel/Render, Capacitor/Cordova |
+| Front-end systems | Vanilla HTML/CSS/JS when the problem is small; intentional UI, not template sludge |
+| Embedded | Arduino Mega/Uno, sensing, relays, scheduling, KiCad handoff |
+| Docs and evidence | Markdown, architecture notes, screenshots, runbooks, source-linked diagrams |
+| Networking / security coursework | Packet Tracer labs, switching/routing basics, Wireshark |
+
+## Working style
+
+- Prefer runnable demos and clear READMEs over private screenshot dumps.
+- Keep secrets and client context out of public trees.
+- School projects get product names and setup docs; course credit lives at the bottom of each repo, not as the headline.
+
+## Contact
+
+- GitHub: [cikeyz](https://github.com/cikeyz)
